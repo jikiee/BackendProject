@@ -41,7 +41,8 @@ namespace Business.Concrete
 
         public IResult Update(Category category)
         {
-            throw new NotImplementedException();
+            _categoryDal.Update(category);
+            return new SuccessResult("category updated..");
         }
     }
 }

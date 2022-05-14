@@ -50,11 +50,11 @@ namespace Core.DataAccess.EntityFramework
             }
         }
 
-        public void Update(TEntity product)
+        public void Update(TEntity entity)
         {
             using (TContext context = new TContext())
             {
-                var updatedEntity = context.Entry(product);
+                var updatedEntity = context.Entry(entity);
                 updatedEntity.State = EntityState.Modified;
                 context.SaveChanges();
             }
